@@ -1,0 +1,28 @@
+{
+    "namespace" : "com.rnd.kafka_avro.dto",
+    "type" : "record",
+    "name" : "Product",
+    "fields" : [
+        {
+            "name" : "id",
+            "type" : "string"
+        },
+        {
+            "name" : "name",
+            "type" : "string"
+        },
+        {
+            "name" : "price",
+            "type" : "double"
+        },
+        {
+            "name" : "ingredient",
+            "type" : "string",
+            "default" : null
+        },
+        {
+            "name" : "qty",
+            "type" : "int"
+        }
+    ]
+}

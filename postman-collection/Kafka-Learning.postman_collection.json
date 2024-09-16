@@ -1,0 +1,229 @@
+{
+	"info": {
+		"_postman_id": "bd9906bb-41ce-47cc-a6cf-d901a7cee41c",
+		"name": "Kafka-Learning",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "10747639"
+	},
+	"item": [
+		{
+			"name": "Avro",
+			"item": [
+				{
+					"name": "Avro Producer",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"categoryName\": \"Kertas\",\n    \"createdBy\": 2,\n    \"lastModifiedBy\": 2\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:1994/kafka/avroProducer",
+							"host": [
+								"localhost"
+							],
+							"port": "1994",
+							"path": [
+								"kafka",
+								"avroProducer"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Avro Consumer",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:1994/kafka/avroConsumer",
+							"host": [
+								"localhost"
+							],
+							"port": "1994",
+							"path": [
+								"kafka",
+								"avroConsumer"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Avro Producer Generic Record",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"categoryName\": \"Kertas\",\n    \"createdBy\": 2,\n    \"lastModifiedBy\": 2\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:1994/kafka/genericRecord/avroProducer",
+							"host": [
+								"localhost"
+							],
+							"port": "1994",
+							"path": [
+								"kafka",
+								"genericRecord",
+								"avroProducer"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Avro Consumer Generic Record",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:1994/kafka/genericRecord/avroConsumer",
+							"host": [
+								"localhost"
+							],
+							"port": "1994",
+							"path": [
+								"kafka",
+								"genericRecord",
+								"avroConsumer"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Producer Syncronous",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"category_name\": \"Baju\",\n    \"created_by\": 1,\n    \"last_modified_by\": 1\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:1994/kafka/producerSyncronous",
+					"host": [
+						"localhost"
+					],
+					"port": "1994",
+					"path": [
+						"kafka",
+						"producerSyncronous"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Consumer",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"category_name\": \"Sendal\",\"created_by\": 2,\"last_modified_by\": 2}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:1995/kafka/consumer",
+					"host": [
+						"localhost"
+					],
+					"port": "1995",
+					"path": [
+						"kafka",
+						"consumer"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Producer Async",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"category_name\": \"Baju\",\"created_by\": 1,\"last_modified_by\": 1}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:1994/kafka/producerAsync",
+					"host": [
+						"localhost"
+					],
+					"port": "1994",
+					"path": [
+						"kafka",
+						"producerAsync"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Consumer Listener",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"category_name\": \"Kaos\",\"created_by\": 2,\"last_modified_by\": 2}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:1995/kafka/consumerListener",
+					"host": [
+						"localhost"
+					],
+					"port": "1995",
+					"path": [
+						"kafka",
+						"consumerListener"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
